@@ -1,9 +1,22 @@
-export default function Avatar({ author }) {
-  const name = author
-    ? author.firstName && author.lastName
-      ? `${author.firstName} ${author.lastName}`
-      : author.name
-    : null
+import React from 'react';
+import Author from 'types/posts/author';
+
+interface AvatarProps {
+  author?: Author;
+}
+
+const Avatar: React.FC<AvatarProps> = ({ author }) => {
+  const name = (() => {
+    if (author) {
+      if (author.firstName && author.lastName) {
+        return `${author.firstName} ${author.lastName}`;
+      }
+
+      return author.name;
+    }
+
+    return null;
+  })();
 
   return (
     <>
@@ -20,3 +33,5 @@ export default function Avatar({ author }) {
     </>
   )
 }
+
+export default Avatar;

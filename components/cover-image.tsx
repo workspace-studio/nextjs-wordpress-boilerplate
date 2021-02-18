@@ -16,13 +16,14 @@ const CoverImage: React.FC<CoverImageProps> = ({ title, coverImage, slug }) => {
       className={cn('shadow-small', {
         'hover:shadow-medium transition-shadow duration-200': slug,
       })}
+      alt="cover"
     />
   )
   return (
     <div className="sm:mx-0">
       {slug ? (
         <Link as={`/posts/${slug}`} href="/posts/[slug]">
-          <a aria-label={title}>{image}</a>
+          <a href="/posts/[slug]" aria-label={title}>{image}</a>
         </Link>
       ) : (
         image
