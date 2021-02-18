@@ -1,0 +1,27 @@
+// Colors
+$primary: #212529;
+$secondary: #79ffe1;
+$dark: #424242;
+$black: #111;
+$white: #fff;
+$grey-100: #eaeaea;
+$grey-200: #fafafa;
+$grey-800: #333;
+
+// Fonts
+$primary-font-family: -apple-system, blinkmacsystemfont, segoe ui, roboto, oxygen,
+ubuntu, cantarell, fira sans, droid sans, helvetica neue, sans-serif;
+
+// Shadows
+$box-shadow-image: 0 5px 10px rgba(0, 0, 0, 0.12);
+$box-shadow-thumbnail: 0 8px 30px rgba(0, 0, 0, 0.12);
+
+// Breakpoints and sizes
+$breakpoints: (
+  xs: 375px,
+  sm: 640px,
+  md: 768px,
+  lg: 1024px,
+  xl: 1280px,
+);
+$max-width: map-get($breakpoints, 'xl');

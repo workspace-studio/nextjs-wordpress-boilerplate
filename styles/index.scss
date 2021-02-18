@@ -1,3 +1,11 @@
+// Settings
+@import './settings/variables';
+
+// Globals
+@import './globals/reset';
+@import './globals/base';
+
+// Tailwind global styles
 @tailwind base;
 
 /* Write your own custom base styles here */
@@ -31,7 +39,8 @@
 }
 
 .alignfull {
-  @apply w-screen relative;
+  @apply w-screen;
+  @apply relative;
 
   left: 50%;
   margin-left: -50vw;
@@ -41,7 +50,8 @@
 }
 
 .wp-block-image img {
-  @apply max-w-full mt-2;
+  @apply max-w-full;
+  @apply mt-2;
 }
 .wp-block-image.aligncenter {
   @apply text-center;
@@ -54,7 +64,9 @@
 .wp-block-image .alignright,
 .wp-block-image .aligncenter,
 .wp-block-image.is-resized {
-  @apply table ml-0 mr-0;
+  @apply table;
+  @apply ml-0;
+  @apply mr-0;
 }
 .wp-block-image .alignleft > figcaption,
 .wp-block-image .alignright > figcaption,
@@ -66,10 +78,12 @@
 }
 
 .wp-block-image .alignleft {
-  @apply float-left mr-4;
+  @apply float-left;
+  @apply mr-4;
 }
 .wp-block-image .alignright {
-  @apply float-right ml-4;
+  @apply float-right;
+  @apply ml-4;
 }
 .wp-block-image .aligncenter {
   @apply m-auto;
@@ -77,12 +91,17 @@
 
 .wp-block-button a,
 .wp-block-file a.wp-block-file__button {
-  @apply bg-blue-500 text-white no-underline py-2 px-4;
+  @apply bg-blue-500;
+  @apply text-white;
+  @apply no-underline;
+  @apply py-2;
+  @apply px-4;
 }
 
 .wp-block-button a:hover,
 .wp-block-file a.wp-block-file__button:hover {
-  @apply bg-blue-400 cursor-pointer;
+  @apply bg-blue-400;
+  @apply cursor-pointer;
 }
 
 .wp-block-file a:first-of-type {
@@ -90,7 +109,13 @@
 }
 
 .wp-block-cover {
-  @apply flex flex-wrap justify-center items-center bg-cover bg-center overflow-hidden;
+  @apply flex;
+  @apply flex-wrap;
+  @apply justify-center;
+  @apply items-center;
+  @apply bg-cover;
+  @apply bg-center;
+  @apply overflow-hidden;
 
   min-height: 430px;
 }
@@ -100,5 +125,7 @@
 }
 
 .wp-block-media-text {
-  @apply grid grid-cols-2 gap-4;
+  @apply grid;
+  @apply grid-cols-2;
+  @apply gap-4;
 }
