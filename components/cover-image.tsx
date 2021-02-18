@@ -1,7 +1,15 @@
-import cn from 'classnames'
-import Link from 'next/link'
+import React from 'react';
+import cn from 'classnames';
+import Link from 'next/link';
+import FeaturedImage from 'types/posts/featuredImage';
 
-export default function CoverImage({ title, coverImage, slug }) {
+interface CoverImageProps {
+  title: string;
+  coverImage: FeaturedImage;
+  slug?: string;
+}
+
+const CoverImage: React.FC<CoverImageProps> = ({ title, coverImage, slug }) => {
   const image = (
     <img
       src={coverImage?.sourceUrl}
@@ -22,3 +30,5 @@ export default function CoverImage({ title, coverImage, slug }) {
     </div>
   )
 }
+
+export default CoverImage;
