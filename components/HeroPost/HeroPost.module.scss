@@ -1,0 +1,57 @@
+@import 'styles/mixins/breakpoints.scss';
+
+.cover {
+  margin-bottom: 2rem;
+
+  @include media('md') {
+    margin-bottom: 4rem;
+  }
+}
+
+.container {
+  margin-bottom: 5rem;
+
+  @include media('md') {
+    display: grid;
+    margin-bottom: 7rem;
+    grid-column-gap: 4rem;
+    column-gap: 4rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  @include media('lg') {
+    grid-column-gap: 2rem;
+    column-gap: 2rem;
+  }
+
+  .title {
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    font-size: 2.25rem;
+
+    .link {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    @include media('lg') {
+      font-size: 2.75rem;
+    }
+  }
+
+  .date {
+    font-size: 1.125rem;
+    margin-bottom: 1rem;
+
+    @include media('md') {
+      margin-bottom: 0;
+    }
+  }
+
+  .text {
+    margin-bottom: 1rem;
+    line-height: 1.625;
+    font-size: 1.125rem;
+  }
+}

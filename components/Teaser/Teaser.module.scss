@@ -1,0 +1,28 @@
+.container {
+  .marginBottom {
+    margin-bottom: 1.25rem;
+  }
+
+  .title {
+    margin-bottom: 0.75rem;
+    line-height: 1.375;
+    font-size: 1.875rem;
+
+    .link {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .date {
+    margin-bottom: 1rem;
+    font-size: 1.125rem;
+  }
+
+  .excerpt {
+    margin-bottom: 1rem;
+    line-height: 1.625;
+    font-size: 1.125rem;
+  }
+}

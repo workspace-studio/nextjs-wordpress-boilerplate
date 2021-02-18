@@ -1,0 +1,26 @@
+@import 'styles/settings/variables.scss';
+@import 'styles/utils/rem-calc.scss';
+
+.container {
+  border-bottom-width: rem-calc(1);
+  border-color: $grey-800;
+  background-color: $grey-800;
+  color: $white;
+
+  .text {
+    text-align: center;
+    padding-top: rem-calc(8);
+    padding-bottom: rem-calc(8);
+    font-size: 0.875rem;
+  }
+
+  .link {
+    transition-duration: 200ms;
+    transition-property: background-color, border-color, color, fill, stroke;
+    text-decoration: underline;
+
+    &:hover {
+      color: $secondary;
+    }
+  }
+}

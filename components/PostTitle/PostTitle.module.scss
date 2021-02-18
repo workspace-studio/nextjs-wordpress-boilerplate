@@ -1,0 +1,20 @@
+@import 'styles/mixins/breakpoints.scss';
+
+.container {
+  font-weight: 700;
+  font-size: 2.75rem;
+  line-height: 1.2;
+  margin-bottom: 3rem;
+  text-align: center;
+  letter-spacing: -0.04em;
+
+  @include media('md') {
+    font-size: 4.5rem;
+    line-height: 1;
+    text-align: left;
+  }
+
+  @include media('lg') {
+    font-size: 6.25rem;
+  }
+}

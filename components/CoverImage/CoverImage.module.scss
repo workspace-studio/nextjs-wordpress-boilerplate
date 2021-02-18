@@ -1,0 +1,22 @@
+@import 'styles/settings/variables.scss';
+@import 'styles/mixins/breakpoints.scss';
+
+.container {
+  @include media('sm') {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .image {
+    box-shadow: $box-shadow-image;
+  }
+
+  .thumbnail {
+    transition-property: box-shadow;
+    transition-duration: 200ms;
+
+    &:hover {
+      box-shadow: $box-shadow-thumbnail;
+    }
+  }
+}

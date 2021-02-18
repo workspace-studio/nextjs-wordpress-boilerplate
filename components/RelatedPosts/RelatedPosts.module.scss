@@ -1,0 +1,40 @@
+@import 'styles/mixins/breakpoints.scss';
+
+.container {
+  padding-top: 8rem;
+
+  .heading {
+    font-weight: 700;
+    font-size: 2.75rem;
+    line-height: 1.2;
+    margin-bottom: 2rem;
+    letter-spacing: -0.04em;
+
+    @include media('md') {
+      font-size: 4.5rem;
+    }
+  }
+
+  .grid {
+    display: grid;
+    padding-bottom: 8rem;
+    grid-row-gap: 5rem;
+    row-gap: 5rem;
+    grid-column-gap: 4rem;
+    column-gap: 4rem;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+
+    @include media('md') {
+      grid-column-gap: 4rem;
+      column-gap: 4rem;
+      grid-row-gap: 8rem;
+      row-gap: 8rem;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    @include media('lg') {
+      grid-column-gap: 8rem;
+      column-gap: 8rem;
+    }
+  }
+}

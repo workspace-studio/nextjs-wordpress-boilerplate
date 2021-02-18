@@ -1,0 +1,16 @@
+.container {
+  max-width: 42rem;
+  margin-left: auto;
+  margin-right: auto;
+
+  .text {
+    margin-top: 2rem;
+    font-size: 1.125rem;
+    font-weight: 700;
+
+    .tag {
+      margin-left: 1rem;
+      font-weight: 400;
+    }
+  }
+}

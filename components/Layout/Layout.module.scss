@@ -1,0 +1,15 @@
+@import 'styles/settings/variables.scss';
+
+.container {
+  min-height: 100vh;
+
+  &.darkTheme {
+    background-color: $dark;
+    color: $white;
+
+    * {
+      background-color: $dark;
+      color: $white;
+    }
+  }
+}
