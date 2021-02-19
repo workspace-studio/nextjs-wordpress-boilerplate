@@ -13,6 +13,7 @@
     "lint": "yarn lint:base --fix --cache --cache-location=./node_modules/.cache/ && yarn lint:styles"
   },
   "dependencies": {
+    "@material-ui/core": "^4.11.3",
     "classnames": "2.2.6",
     "date-fns": "2.14.0",
     "next": "latest",
