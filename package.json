@@ -1,6 +1,9 @@
 {
-  "name": "cms-wordpress",
+  "name": "nextjs-wordpress-boilerplate",
   "version": "1.0.0",
+  "author": {
+    "name": "Ivan Lovrić"
+  },
   "scripts": {
     "dev": "next",
     "build": "next build",
