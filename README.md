@@ -45,6 +45,7 @@ cp .env.local.example .env.local
 
 Then open `.env.local` and set `WORDPRESS_API_URL`, `WORDPRESS_AUTH_REFRESH_TOKEN`, and `WORDPRESS_PREVIEW_SECRET` to match your WordPress data.
 You can find the full configuration guide here:
+
 > [WordPress Configuration Guide](https://github.com/workspace-agency/nextjs-wordpress-boilerplate/blob/main/wp-configuration-guide.md)
 
 Your `.env.local` file should look like this:
@@ -80,6 +81,7 @@ _Builds the application for production usage._
 - [Next.js](https://github.com/vercel/next.js) as a [React](https://github.com/facebook/react/) framework for Static Generation and Server-side Rendering
 - [TypeScript](https://github.com/microsoft/TypeScript) as a language for application-scale JavaScript
 - [Sass](https://github.com/sass/dart-sass) as CSS pre-processor
+- [Material-UI](https://github.com/mui-org/material-ui) as component library
 
 ## Libraries
 
