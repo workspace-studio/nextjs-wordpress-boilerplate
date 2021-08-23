@@ -12,7 +12,6 @@ export default class MyDocument extends Document {
 
     return (
       <Html lang="en">
-        <Head />
         <Head>
           <meta name="theme-color" content={primary.main} />
         </Head>
