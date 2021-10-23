@@ -9,12 +9,12 @@ $grey-200: #fafafa;
 $grey-800: #333;
 
 // Fonts
-$primary-font-family: -apple-system, blinkmacsystemfont, segoe ui, roboto, oxygen,
-ubuntu, cantarell, fira sans, droid sans, helvetica neue, sans-serif;
+$primary-font-family: -apple-system, blinkmacsystemfont, segoe ui, roboto, oxygen, ubuntu, cantarell, fira sans,
+  droid sans, helvetica neue, sans-serif;
 
 // Shadows
-$box-shadow-image: 0 5px 10px rgba(0, 0, 0, 0.12);
-$box-shadow-thumbnail: 0 8px 30px rgba(0, 0, 0, 0.12);
+$box-shadow-image: 0 5px 10px rgb(0 0 0 / 12%);
+$box-shadow-thumbnail: 0 8px 30px rgb(0 0 0 / 12%);
 
 // Breakpoints and sizes
 $breakpoints: (

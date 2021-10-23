@@ -1,5 +1,6 @@
 import React from 'react';
 import Container from 'components/Container';
+import Hyperlink from 'components/Hyperlink';
 
 import styles from './Alert.module.scss';
 
@@ -17,9 +18,9 @@ const Alert: React.FC<AlertProps> = ({ preview }) => {
       <Container>
         <div className={styles.text}>
           This page is a preview.&nbsp;
-          <a href="/api/exit-preview" className={styles.link}>
+          <Hyperlink href="/api/exit-preview" AnchorProps={{ className: styles.link }}>
             Click here
-          </a>
+          </Hyperlink>
           &nbsp; to exit preview mode.
         </div>
       </Container>

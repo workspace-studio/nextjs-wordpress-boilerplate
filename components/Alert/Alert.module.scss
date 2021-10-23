@@ -15,6 +15,7 @@
   }
 
   .link {
+    color: $white;
     transition-duration: 200ms;
     transition-property: background-color, border-color, color, fill, stroke;
     text-decoration: underline;
