@@ -1,33 +1,31 @@
 import React from 'react';
 import Head from 'next/head';
 import theme from 'styles/themes';
+import createEmotionCache from 'styles/themes/createEmotionCache';
 
-import { AppProps } from 'next/app';
-import { ThemeProvider, CssBaseline } from '@material-ui/core';
+import { AppProps as NextAppProps } from 'next/app';
+import { ThemeProvider, CssBaseline } from '@mui/material';
+import { CacheProvider, EmotionCache } from '@emotion/react';
 
 import '../styles/index.scss';
 
-const App: React.FC<AppProps> = ({ Component, pageProps }) => {
-  React.useEffect(() => {
-    // Remove the server-side injected CSS.
-    const jssStyles = document.querySelector('#jss-server-side');
+// Client-side cache, shared for the whole session of the user in the browser.
+const clientSideEmotionCache = createEmotionCache();
 
-    if (jssStyles && jssStyles.parentElement) {
-      jssStyles.parentElement.removeChild(jssStyles);
-    }
-  }, []);
+interface AppProps extends NextAppProps {
+  emotionCache?: EmotionCache;
+}
 
-  return (
-    <>
-      <Head>
-        <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
-      </Head>
-      <ThemeProvider theme={theme}>
-        <CssBaseline />
-        <Component {...pageProps} />
-      </ThemeProvider>
-    </>
-  );
-};
+const App: React.FC<AppProps> = ({ Component, pageProps, emotionCache = clientSideEmotionCache }) => (
+  <CacheProvider value={emotionCache}>
+    <Head>
+      <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
+    </Head>
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <Component {...pageProps} />
+    </ThemeProvider>
+  </CacheProvider>
+);
 
 export default App;
