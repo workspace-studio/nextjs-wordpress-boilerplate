@@ -6,7 +6,7 @@ export type Edges<T> = {
   edges: Node<T>[];
 };
 
-export type QueryResult<TKey extends string, TData extends unknown = unknown> = {
+export type QueryResult<TKey extends string, TData = unknown> = {
   [key in TKey]: TData;
 };
 

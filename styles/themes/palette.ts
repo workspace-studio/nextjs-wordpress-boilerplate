@@ -1,4 +1,4 @@
-import { ThemeOptions } from '@material-ui/core';
+import { ThemeOptions } from '@mui/material';
 import Colors from './colors';
 
 const palette: ThemeOptions['palette'] = {

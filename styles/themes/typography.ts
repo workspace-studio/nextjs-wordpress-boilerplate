@@ -1,7 +1,8 @@
-import { ThemeOptions } from '@material-ui/core';
+import { ThemeOptions } from '@mui/material';
 
 const typography: ThemeOptions['typography'] = {
-  fontFamily: '-apple-system, blinkmacsystemfont, segoe ui, roboto, oxygen, ubuntu, cantarell, fira sans, droid sans, helvetica neue, sans-serif',
+  fontFamily:
+    '-apple-system, blinkmacsystemfont, segoe ui, roboto, oxygen, ubuntu, cantarell, fira sans, droid sans, helvetica neue, sans-serif',
   h1: {
     fontSize: '80px',
     lineHeight: '80px',

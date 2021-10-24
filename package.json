@@ -1,53 +1,56 @@
 {
   "name": "nextjs-wordpress-boilerplate",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "author": {
     "name": "Ivan Lovrić"
   },
   "scripts": {
+    "prepare": "husky install",
     "dev": "next",
     "build": "next build",
     "start": "next start",
     "lint:base": "eslint --ext .ts,.tsx ./",
     "lint:styles": "stylelint '**/*.scss' --fix",
-    "lint": "yarn lint:base --fix --cache --cache-location=./node_modules/.cache/ && yarn lint:styles"
+    "lint": "pretty-quick --staged && yarn lint:base --fix --cache --cache-location=./node_modules/.cache/ && yarn lint:styles"
   },
   "dependencies": {
-    "@material-ui/core": "^4.11.3",
-    "classnames": "2.2.6",
-    "date-fns": "2.14.0",
-    "next": "latest",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
+    "@emotion/cache": "^11.5.0",
+    "@emotion/react": "^11.5.0",
+    "@emotion/server": "^11.4.0",
+    "@emotion/styled": "^11.3.0",
+    "@mui/icons-material": "^5.0.4",
+    "@mui/material": "^5.0.4",
+    "@mui/styles": "^5.0.1",
+    "classnames": "^2.3.1",
+    "date-fns": "^2.25.0",
+    "next": "11.1.2",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
     "sass": "^1.32.7"
   },
   "devDependencies": {
-    "@types/node": "^14.14.28",
-    "@types/react": "^17.0.2",
-    "@typescript-eslint/eslint-plugin": "^4.15.1",
-    "@typescript-eslint/parser": "^4.15.1",
-    "eslint": "^7.20.0",
+    "@types/node": "^16.11.4",
+    "@types/react": "^17.0.31",
+    "@typescript-eslint/eslint-plugin": "^5.1.0",
+    "@typescript-eslint/parser": "^5.1.0",
+    "eslint": "^7.23.0",
     "eslint-config-airbnb": "^18.2.1",
-    "eslint-config-prettier": "^7.2.0",
+    "eslint-config-next": "^11.1.2",
+    "eslint-config-prettier": "^8.3.0",
     "eslint-config-react": "^1.1.7",
-    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-import": "^2.25.2",
     "eslint-plugin-jsx-a11y": "^6.4.1",
-    "eslint-plugin-prettier": "^3.3.1",
-    "eslint-plugin-react": "^7.22.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.26.1",
     "eslint-plugin-react-hooks": "^4.2.0",
-    "husky": "^4.3.6",
-    "prettier": "^2.2.1",
-    "pretty-quick": "^3.1.0",
+    "husky": "^7.0.4",
+    "prettier": "^2.4.1",
+    "pretty-quick": "^3.1.1",
     "stylelint": "^13.10.0",
     "stylelint-config-prettier": "^8.0.2",
     "stylelint-config-standard": "^20.0.0",
     "stylelint-scss": "^3.19.0",
-    "typescript": "^4.1.5"
+    "typescript": "4.4.4"
   },
-  "license": "MIT",
-  "husky": {
-    "hooks": {
-      "pre-commit": "pretty-quick --staged && yarn lint"
-    }
-  }
+  "license": "MIT"
 }

@@ -1,16 +1,14 @@
-import { createMuiTheme } from '@material-ui/core';
+import { createTheme } from '@mui/material';
 
 import breakpoints from './breakpoints';
-import overrides from './overrides';
+import components from './components';
 import palette from './palette';
-import props from './props';
 import typography from './typography';
 
-const theme = createMuiTheme({
+const theme = createTheme({
   breakpoints,
-  overrides,
+  components,
   palette,
-  props,
   typography,
 });
 

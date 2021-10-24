@@ -16,6 +16,7 @@ import { GetStaticPaths, GetStaticProps } from 'next';
 import { useRouter } from 'next/router';
 import { getAllPostsWithSlug, getPostAndMorePosts } from 'lib/api';
 import { Edges } from 'types/common';
+import { Preview } from 'types/posts/preview';
 
 interface PostProps {
   post: PostType;
@@ -65,8 +66,12 @@ const Post: React.FC<PostProps> = ({ post, posts, preview }) => {
 
 export default Post;
 
-export const getStaticProps: GetStaticProps<{}, { slug: string }> = async ({ params, preview = false, previewData }) => {
-  const data = await getPostAndMorePosts(params.slug, preview, previewData);
+export const getStaticProps: GetStaticProps<{}, { slug: string }> = async ({
+  params,
+  preview = false,
+  previewData,
+}) => {
+  const data = await getPostAndMorePosts(params.slug, preview, previewData as Preview);
 
   return {
     props: {
